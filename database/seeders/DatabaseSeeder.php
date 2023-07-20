@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             SneakersSeeder::class,
             SizeSneakersSeeder::class,
             ImageSneakersSeeder::class,
+            PurchaseSeeder::class,
         ]);
     }
 }

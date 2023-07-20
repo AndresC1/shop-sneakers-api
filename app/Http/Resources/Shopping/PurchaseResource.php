@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\Http\Resources\Shopping;
 
-use App\Http\Resources\Shopping\PurchaseResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class UserResource extends JsonResource
+class PurchaseResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,9 +16,12 @@ class UserResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'name' => $this->name, 
-            'email' => $this->email,
-            'purchases' => PurchaseResource::collection($this->purchases),
+            'code' => $this->code,
+            'status' => $this->status,
+            'total' => $this->total,
+            'discount' => $this->discount,
+            'tax' => $this->tax,
+            'grand_total' => $this->grand_total,
         ];
     }
 }
